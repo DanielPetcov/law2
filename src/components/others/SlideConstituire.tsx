@@ -119,6 +119,7 @@ export function SlideConstituire({ active }: { active: boolean }) {
           <img
             src="/cladire.png"
             alt="Sediul SFS — clădire istorică / inaugurare"
+            className="rounded-md"
           />
           <div
             style={{
