@@ -4,6 +4,30 @@ import { Chenar, Tag, Heading, Divider, Body, StatBox } from "../ui";
 
 export function SlideSarcini({ active }: { active: boolean }) {
   const cls = active ? "slide-active" : "";
+
+  const tasks = [
+    [
+      "🎯",
+      "Conformare voluntară",
+      "Stimularea contribuabililor să declare și să achite corect obligațiile fiscale prin informare, ghiduri fiscale și servicii de asistență.",
+    ],
+    [
+      "💰",
+      "Colectarea veniturilor bugetare",
+      "Asigurarea acumulării veniturilor la bugetul public național din impozite directe (impozitul pe venit, impozitul pe bunuri imobile) și indirecte (TVA, accize).",
+    ],
+    [
+      "🚫",
+      "Combaterea evaziunii fiscale",
+      "Identificarea și sancționarea cazurilor de fraudă fiscală, activitate economică nedeclarată și alte forme de neconformare fiscală.",
+    ],
+    [
+      "🔄",
+      "Modernizare și digitalizare",
+      "Implementarea sistemelor informaționale precum e-Factura, Declarația electronică și alte servicii digitale pentru eficientizarea administrării fiscale.",
+    ],
+  ];
+
   return (
     <div
       className={cls}
@@ -15,6 +39,7 @@ export function SlideSarcini({ active }: { active: boolean }) {
       }}
     >
       <Chenar />
+
       <div
         style={{
           position: "relative",
@@ -28,18 +53,42 @@ export function SlideSarcini({ active }: { active: boolean }) {
         }}
         className="grid grid-cols-1 lg:grid-cols-2"
       >
+        {/* LEFT COLUMN */}
         <div>
           <div className="anim anim-sr d1">
-            <Tag>Sarcinile Principale · Art. 132 CF</Tag>
+            <Tag>Sarcinile Principale · Art. 132 Cod Fiscal</Tag>
           </div>
+
           <div className="anim anim-sr d2">
             <Heading size={50}>
               Sarcina de{" "}
               <em style={{ color: C.gold, fontStyle: "italic" }}>Bază</em>
             </Heading>
           </div>
+
           <Divider />
+
+          {/* Context paragraph */}
           <div className="anim anim-fu d3">
+            <p
+              style={{
+                fontFamily: "'Lato', sans-serif",
+                fontSize: 16,
+                color: C.muted,
+                lineHeight: 1.7,
+                marginBottom: 18,
+              }}
+            >
+              Serviciul Fiscal de Stat are rolul de a asigura administrarea
+              eficientă a sistemului fiscal al Republicii Moldova. Prin
+              activitățile sale de control, administrare și asistență pentru
+              contribuabili, instituția contribuie la acumularea veniturilor la
+              bugetul public național și la menținerea disciplinei fiscale în
+              economie.
+            </p>
+          </div>
+
+          <div className="anim anim-fu d4">
             <div
               style={{
                 padding: "18px 20px",
@@ -49,80 +98,76 @@ export function SlideSarcini({ active }: { active: boolean }) {
               }}
             >
               <Body style={{ color: C.cream, fontSize: 16, lineHeight: 1.7 }}>
-                Sarcina de bază a SFS este{" "}
+                Sarcina principală a SFS este{" "}
                 <strong style={{ color: C.goldL }}>
                   exercitarea controlului asupra respectării legislației fiscale
                 </strong>
-                , asigurarea calculării corecte, vărsării depline și la timp la
-                buget a impozitelor, taxelor și altor plăți.
+                , precum și asigurarea calculării corecte, achitării integrale
+                și la timp a impozitelor, taxelor și altor plăți la bugetul
+                public național.
               </Body>
             </div>
           </div>
-          <div className="anim anim-fu d4">
-            {[
-              [
-                "🎯",
-                "Conformare voluntară",
-                "Stimularea contribuabililor să declare și achite corect obligațiile fiscale de bună voie, prin asistență și informare.",
-              ],
-              [
-                "💰",
-                "Colectare venituri",
-                "Asigurarea încasărilor la bugetul de stat din impozite directe (pe venit, imobiliar) și indirecte (TVA, accize).",
-              ],
-              [
-                "🚫",
-                "Combaterea evaziunii",
-                "Identificarea și sancționarea cazurilor de neconformare, fraudă fiscală și activitate economică nedeclarată.",
-              ],
-              [
-                "🔄",
-                "Modernizare digitală",
-                "Implementarea de sisteme IT (e-Factura, Loteria Fiscală) pentru reducerea economiei informale și eficientizarea colectării.",
-              ],
-            ].map(([icon, title, desc]) => (
-              <div
-                key={title}
-                style={{
-                  display: "flex",
-                  gap: 12,
-                  marginBottom: 12,
-                  padding: "14px 16px",
-                  background: C.cream2,
-                  border: `1px solid rgba(180,135,40,.2)`,
-                  borderRadius: 3,
-                }}
-              >
-                <span style={{ fontSize: 22, flexShrink: 0 }}>{icon}</span>
-                <div>
-                  <div
-                    style={{
-                      fontFamily: "'Lato',sans-serif",
-                      fontWeight: 700,
-                      fontSize: 15,
-                      color: C.navy,
-                      marginBottom: 4,
-                    }}
-                  >
-                    {title}
-                  </div>
-                  <div
-                    style={{
-                      fontFamily: "'Lato',sans-serif",
-                      fontSize: 13,
-                      color: C.muted,
-                      lineHeight: 1.5,
-                    }}
-                  >
-                    {desc}
-                  </div>
+
+          {tasks.map(([icon, title, desc]) => (
+            <div
+              key={title}
+              style={{
+                display: "flex",
+                gap: 12,
+                marginBottom: 12,
+                padding: "14px 16px",
+                background: C.cream2,
+                border: `1px solid rgba(180,135,40,.2)`,
+                borderRadius: 3,
+              }}
+            >
+              <span style={{ fontSize: 22, flexShrink: 0 }}>{icon}</span>
+
+              <div>
+                <div
+                  style={{
+                    fontFamily: "'Lato',sans-serif",
+                    fontWeight: 700,
+                    fontSize: 15,
+                    color: C.navy,
+                    marginBottom: 4,
+                  }}
+                >
+                  {title}
+                </div>
+
+                <div
+                  style={{
+                    fontFamily: "'Lato',sans-serif",
+                    fontSize: 13,
+                    color: C.muted,
+                    lineHeight: 1.5,
+                  }}
+                >
+                  {desc}
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
+
+        {/* RIGHT COLUMN */}
         <div className="anim anim-sc d3">
-          <img src="/sfsagent.jpg" alt="agen sfs" className="rounded-md" />
+          <div
+            style={{
+              fontFamily: "'Cormorant Garamond',serif",
+              fontSize: 20,
+              fontWeight: 700,
+              color: C.navy,
+              marginBottom: 10,
+            }}
+          >
+            Activitatea Serviciului Fiscal de Stat
+          </div>
+
+          <img src="/sfsagent.jpg" alt="Agent SFS" className="rounded-md" />
+
           <div style={{ marginTop: 20 }}>
             <div
               style={{
@@ -133,8 +178,9 @@ export function SlideSarcini({ active }: { active: boolean }) {
                 marginBottom: 14,
               }}
             >
-              Indicatori de performanță 2023
+              Indicatori de performanță · 2024
             </div>
+
             <div
               style={{
                 display: "grid",
@@ -143,23 +189,26 @@ export function SlideSarcini({ active }: { active: boolean }) {
               }}
             >
               <StatBox
-                value="+32.3%"
-                label="Creștere impozit venit PF pe bunuri imobile"
+                value="71.5B"
+                label="Lei — venituri colectate la Bugetul Public Național"
                 color={C.navy}
               />
+
               <StatBox
-                value="17.5M"
-                label="Lei — încasări chirie bunuri imobile (trim. I 2023)"
+                value="+11.7%"
+                label="Creștere a încasărilor față de anul 2023"
                 color={C.gold}
               />
+
               <StatBox
-                value="113"
-                label="Persoane fizice au declarat venituri — acțiuni conformare"
+                value="305K"
+                label="Declarații privind impozitul pe venit depuse"
                 color={C.navyL}
               />
+
               <StatBox
-                value="85.7M"
-                label="Lei venit impozabil declarat în urma acțiunilor SFS"
+                value="64B"
+                label="Lei colectați în primele 11 luni ale anului"
                 color={C.red}
               />
             </div>

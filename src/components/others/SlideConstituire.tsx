@@ -1,5 +1,4 @@
 import { C } from "../../lib/common";
-
 import { Chenar, Divider, Tag, Heading, Body, StatBox, FactRow } from "../ui";
 
 export function SlideConstituire({ active }: { active: boolean }) {
@@ -41,7 +40,7 @@ export function SlideConstituire({ active }: { active: boolean }) {
           <Divider />
           <div className="anim anim-fu d3">
             <Body>
-              SFS a fost instituit ca sistem unitar prin{" "}
+              Serviciul Fiscal de Stat a fost instituit ca sistem unitar prin{" "}
               <strong>Legea nr.876-XII din 22 ianuarie 1992</strong>, la scurt
               timp după proclamarea independenței Republicii Moldova.
             </Body>
@@ -50,25 +49,29 @@ export function SlideConstituire({ active }: { active: boolean }) {
             {[
               [
                 "1992",
-                "Înfiintat prin Legea 876-XII — primele inspectorate fiscale",
+                "Înființat prin Legea 876-XII — primele inspectorate fiscale",
               ],
               [
                 "1993",
                 "Reorganizarea Inspectoratelor Fiscale de Stat teritoriale",
               ],
-              ["1994", "Adoptarea Codului Fiscal și a legilor TVA și accize"],
               [
-                "1996",
-                "Înfiintat Inspectoratul Fiscal de Stat pe UTA Găgăuzia (HG 684)",
+                "1994",
+                "Adoptarea legilor privind TVA și accize (Legea 264-XIII și 347-XIII)",
               ],
               [
+                "1996",
+                "Înființat Inspectoratul Fiscal de Stat pe UTA Găgăuzia (HG 684)",
+              ],
+              ["1997", "Adoptarea Codului Fiscal al Republicii Moldova"],
+              [
                 "2010",
-                "Nouă structură organizatorică aprobată (Ord. MF nr.7/2010)",
+                "Nouă structură organizatorică aprobată prin Ordin MF nr.7/2010",
               ],
               ["2014", "Adoptarea stemei și drapelului propriu (HG 500/2014)"],
               [
                 "2017",
-                "Reforma majoră: SFS devine persoană juridică unică (Legea 281)",
+                "Reformă majoră: SFS devine persoană juridică unică (Legea 281/2016)",
               ],
               [
                 "2020",
@@ -113,10 +116,6 @@ export function SlideConstituire({ active }: { active: boolean }) {
           </div>
         </div>
         <div className="anim anim-sc d3">
-          {/* <ImgPlaceholder
-            label="Sediul SFS — clădire istorică / inaugurare"
-            height={200}
-          /> */}
           <img
             src="/cladire.png"
             alt="Sediul SFS — clădire istorică / inaugurare"
@@ -146,12 +145,6 @@ export function SlideConstituire({ active }: { active: boolean }) {
             <FactRow icon="⚖️">
               SFS este subordonat <strong>Ministerului Finanțelor</strong> și nu
               deține autonomie bugetară proprie.
-            </FactRow>
-            <FactRow icon="🏅">
-              Deviză:{" "}
-              <strong>
-                "Funcționarul fiscal — în serviciul contribuabilului"
-              </strong>
             </FactRow>
           </div>
         </div>

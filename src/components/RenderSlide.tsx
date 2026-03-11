@@ -14,6 +14,7 @@ import {
   SlidePersonal,
   SlideConcluzie,
   SlideBibliografie,
+  SlideFinal,
 } from "./others";
 
 const map = {
@@ -30,6 +31,7 @@ const map = {
   personal: SlidePersonal,
   concluzie: SlideConcluzie,
   bibliografie: SlideBibliografie,
+  final: SlideFinal,
 } satisfies Record<string, ComponentType<{ active: boolean }>>;
 export type SlideId = keyof typeof map;
 

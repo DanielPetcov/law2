@@ -11,3 +11,4 @@ export * from "./SlideIntro";
 export * from "./SlideOrgchart";
 export * from "./SlidePersonal";
 export * from "./SlideSarcini";
+export * from "./SlideFinal";

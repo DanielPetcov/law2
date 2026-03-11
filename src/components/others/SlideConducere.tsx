@@ -42,6 +42,7 @@ export function SlideConducere({ active }: { active: boolean }) {
           }}
           className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr]"
         >
+          {/* Director */}
           <div>
             <div className="anim anim-fu d3">
               <div
@@ -56,10 +57,9 @@ export function SlideConducere({ active }: { active: boolean }) {
                 }}
                 className="flex-col lg:flex-row lg:flex-start"
               >
-                {/* <ImgPlaceholder label="Foto Olga Golban" height={100} /> */}
                 <img
                   src="/olga.jpg"
-                  alt="olga golban"
+                  alt="Olga Golban"
                   className="max-h-100 rounded-md object-contain w-fit lg:w-auto mx-auto"
                 />
                 <div style={{ flex: 1 }}>
@@ -86,13 +86,17 @@ export function SlideConducere({ active }: { active: boolean }) {
                     Directoare · din 28 feb. 2024
                   </div>
                   <Body style={{ fontSize: 13 }}>
-                    Doctor în științe economice, finanțist și fiscalist cu
-                    master în drept. Activează în sistemul fiscal din 2002.
-                    Numită de Guvern la propunerea Ministerului Finanțelor.
+                    Numită Directoare a Serviciului Fiscal de Stat prin decizia
+                    Guvernului din 21 feb. 2024, cu aplicare din 28 feb. 2024.
+                    Are experiență în administrația fiscală din 2007 și a
+                    deținut funcții de conducere importante în cadrul SFS și
+                    Ministerului Finanțelor.
                   </Body>
                 </div>
               </div>
             </div>
+
+            {/* Directori Adjuncți */}
             <div
               style={{
                 display: "grid",
@@ -104,7 +108,7 @@ export function SlideConducere({ active }: { active: boolean }) {
                 { name: "Petru GRICIUC", role: "Director Adjunct" },
                 { name: "Iuri LICHII", role: "Director Adjunct" },
                 { name: "Sergiu CHIRCU", role: "Director Adjunct" },
-                { name: "Victoria BELOUS", role: "Director Adjunct" },
+                { name: "Serghei ARHIRII", role: "Director Adjunct interimar" },
               ].map((p, i) => (
                 <div className={`anim anim-fu d${i + 4}`} key={p.name}>
                   <div
@@ -143,6 +147,8 @@ export function SlideConducere({ active }: { active: boolean }) {
               ))}
             </div>
           </div>
+
+          {/* Baza legală */}
           <div className="anim anim-sc d3">
             <div
               style={{
@@ -165,20 +171,20 @@ export function SlideConducere({ active }: { active: boolean }) {
               </div>
               {[
                 [
-                  "Art. 132-3 Cod Fiscal",
+                  "Art. 132‑3 Cod Fiscal",
                   "Conducerea SFS este asigurată de Director, numit de Guvern la propunerea Ministrului Finanțelor.",
                 ],
                 [
-                  "HG 395/2017 pct. 21-22",
-                  "Directorul reprezintă SFS față de terți și acordă împuterniciri angajaților.",
+                  "HG 395/2017 pct. 21‑22",
+                  "Directorul reprezintă SFS față de terți și poate acorda împuterniciri angajaților.",
                 ],
                 [
                   "Atribuții Director",
-                  "Aprobă alocațiile bugetare, asigură control intern, emite ordine obligatorii pentru subdiviziuni.",
+                  "Coordonează activitatea generală a SFS și ia decizii organizatorice interne.",
                 ],
                 [
                   "Directori adjuncți",
-                  "Atribuțiile lor se stabilesc prin Ordin al Directorului SFS, conform necesităților structurale.",
+                  "Funcțiile lor sunt stabilite prin ordin intern, în baza necesităților structurale.",
                 ],
               ].map(([t, d]) => (
                 <div
@@ -213,10 +219,11 @@ export function SlideConducere({ active }: { active: boolean }) {
                 </div>
               ))}
             </div>
+
             <div style={{ marginTop: 14 }}>
               <FactRow icon="📅">
-                Audiențe: în a treia vineri a lunii, orele 14:00–17:00, la
-                sediul SFS, Chișinău
+                Audiențe conform regulilor aprobate prin HG nr.250/2024 — în a
+                treia vineri a lunii, orele 14:00–17:00, la sediul SFS.
               </FactRow>
             </div>
           </div>

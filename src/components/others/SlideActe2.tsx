@@ -46,33 +46,20 @@ export function SlideActe2({ active }: { active: boolean }) {
                 title: "HG nr.500/2014 — Simbolica SFS",
                 desc: "Aprobă stema, drapelul și culoarea corporativă a SFS, precum și deviza instituțională „În serviciul contribuabilului”.",
               },
+
               {
                 n: "06",
-                year: "1994",
-                color: C.navyL,
-                title: "Legea nr.264-XIII / 347-XIII din 1994",
-                desc: "Adoptarea legilor privind TVA și accizele — primele reglementări majore ale impozitelor indirecte în Moldova independentă.",
-              },
-              {
-                n: "07",
                 year: "2023",
                 color: C.gold,
                 title: "Ordinele SFS (nr.53/2022, 208/2024 etc.)",
                 desc: "Ordine interne ale Serviciului Fiscal privind formulare, proceduri, dări de seamă fiscale și instrucțiuni operaționale pentru inspectori.",
               },
               {
-                n: "08",
+                n: "07",
                 year: "2024",
                 color: C.red,
                 title: "HG nr.250 din 10 apr. 2024",
                 desc: "Regulamentul privind organizarea audiențelor publice ale conducerii SFS cu cetățenii și contribuabilii.",
-              },
-              {
-                n: "09",
-                year: "2024",
-                color: C.navy,
-                title: "Tratate internaționale de evitare a dublei impuneri",
-                desc: "Moldova are semnate zeci de convenții bilaterale, aplicate de SFS pentru schimbul de informații fiscale cu alte state.",
               },
             ].map((a) => (
               <div className="anim anim-fu d3" key={a.n}>

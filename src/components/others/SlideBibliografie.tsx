@@ -7,59 +7,59 @@ export function SlideBibliografie({ active }: { active: boolean }) {
   const refs = [
     {
       n: "1",
-      text: "Constituția Republicii Moldova, adoptată la 29 iulie 1994, Monitorul Oficial nr.1 din 12.08.1994.",
+      text: "Constituția Republicii Moldova, adoptată la 29 iulie 1994, Monitorul Oficial al Republicii Moldova nr.1 din 12.08.1994.",
     },
     {
       n: "2",
-      text: "Codul Fiscal al Republicii Moldova, Titlul V — Administrarea fiscală, art. 131–158. (Legea nr.1163-XIII din 24.04.1997).",
+      text: "Codul Fiscal al Republicii Moldova, Legea nr.1163-XIII din 24.04.1997, Titlul V – Administrarea fiscală (art. 131–158).",
     },
     {
       n: "3",
-      text: "Legea nr.876-XII din 22 ianuarie 1992 cu privire la Serviciul Fiscal de Stat. Monitorul Oficial al RM.",
+      text: "Legea nr.876-XII din 22 ianuarie 1992 cu privire la Serviciul Fiscal de Stat.",
     },
     {
       n: "4",
-      text: "Legea nr.281 din 16.12.2016 privind modificarea Codului Fiscal — reforma SFS ca persoană juridică unică.",
+      text: "Legea nr.281 din 16 decembrie 2016 privind modificarea Codului Fiscal și reorganizarea Serviciului Fiscal de Stat.",
     },
     {
       n: "5",
-      text: "Hotărârea Guvernului nr.395 din 12 mai 2017 — Regulamentul de organizare și funcționare a Serviciului Fiscal de Stat.",
+      text: "Hotărârea Guvernului nr.395 din 05 iunie 2017 privind organizarea și funcționarea Serviciului Fiscal de Stat.",
     },
     {
       n: "6",
-      text: "Hotărârea Guvernului nr.500 din 1 iulie 2014 — Stema, drapelul și culoarea corporativă a SFS.",
+      text: "Hotărârea Guvernului nr.500 din 01 iulie 2014 privind aprobarea simbolicii Serviciului Fiscal de Stat.",
     },
     {
       n: "7",
-      text: "Hotărârea Guvernului nr.250 din 10 aprilie 2024 — Regulamentul privind organizarea audiențelor publice SFS.",
+      text: "Hotărârea Guvernului nr.250 din 10 aprilie 2024 privind organizarea audiențelor publice în cadrul Serviciului Fiscal de Stat.",
     },
     {
       n: "8",
-      text: "Serviciul Fiscal de Stat — Pagina oficială: www.sfs.md. Accesat în octombrie 2024.",
+      text: "Serviciul Fiscal de Stat — pagina oficială: https://sfs.md. Accesat în 2026.",
     },
     {
       n: "9",
-      text: "Serviciul Fiscal de Stat — Secțiunea 'Istoria SFS': https://sfs.md/ro/istoria-sfs. Accesat în octombrie 2024.",
+      text: "Serviciul Fiscal de Stat — Istoria instituției: https://sfs.md/ro/istoria-sfs. Accesat în 2026.",
     },
     {
       n: "10",
-      text: "Serviciul Fiscal de Stat — Conducerea: https://sfs.md/ro/conducere. Accesat în octombrie 2024.",
+      text: "Serviciul Fiscal de Stat — Conducerea instituției: https://sfs.md/ro/conducere. Accesat în 2026.",
     },
     {
       n: "11",
-      text: "Serviciul Fiscal de Stat — Contacte și audiențe: https://sfs.md/ro/pagina/contacte. Accesat în octombrie 2024.",
+      text: "Serviciul Fiscal de Stat — Contacte și audiențe: https://sfs.md/ro/pagina/contacte. Accesat în 2026.",
     },
     {
       n: "12",
-      text: "MOLDPRES — 'Olga Golban numită director SFS', 21 februarie 2024. www.moldpres.md.",
+      text: "Ministerul Finanțelor al Republicii Moldova — material informativ privind Serviciul Fiscal de Stat. https://www.mf.gov.md/ro/download/file/fid/35515?language=ru",
     },
     {
       n: "13",
-      text: "Legis.md — HG nr.395/2017, text integral: https://www.legis.md/cautare/getResults?doc_id=123451",
+      text: "Legis.md — Hotărârea Guvernului nr.395/2017 privind organizarea și funcționarea Serviciului Fiscal de Stat.",
     },
     {
       n: "14",
-      text: "Lege.md — Codul Fiscal, Art. 132–153: https://lege.md/cod_fiscal/art-8",
+      text: "Portal legislativ — Codul Fiscal al Republicii Moldova (art. 131–153).",
     },
   ];
   return (

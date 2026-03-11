@@ -29,4 +29,5 @@ export const SLIDES: { id: SlideId; label: string }[] = [
   { id: "personal", label: "Personal" },
   { id: "concluzie", label: "Concluzie" },
   { id: "bibliografie", label: "Bibliografie" },
+  { id: "final", label: "Mulțumesc pentru atenție" },
 ];

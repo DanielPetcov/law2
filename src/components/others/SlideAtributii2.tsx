@@ -1,9 +1,22 @@
 import { C } from "../../lib/common";
-
 import { Chenar, Tag, Heading, Divider } from "../ui";
 
 export function SlideAtributii2({ active }: { active: boolean }) {
   const cls = active ? "slide-active" : "";
+
+  const rights = [
+    "Efectuează controale fiscale la contribuabili și alte persoane conform prevederilor Codului Fiscal.",
+    "Solicită și primește gratuit informații, date și documente de la persoane fizice și juridice necesare administrării fiscale.",
+    "Efectuează vizite fiscale la sediul contribuabililor pentru verificarea respectării legislației fiscale.",
+    "Examinează și poate sigila încăperi de producție, depozite sau spații comerciale în cadrul controlului fiscal.",
+    "Are acces la evidența contabilă și la sistemele informatice utilizate pentru înregistrarea operațiunilor economice.",
+    "Aplică măsuri de executare silită și instituie sechestru asupra bunurilor pentru recuperarea obligațiilor fiscale neachitate.",
+    "Constată contravenții și transmite materialele către organele competente în cazul infracțiunilor fiscale.",
+    "Emite soluții fiscale individuale anticipate (SFIA) pentru clarificarea modului de aplicare a legislației fiscale.",
+    "Confirmă rezidența fiscală a contribuabililor pentru aplicarea convențiilor internaționale de evitare a dublei impuneri.",
+    "Cooperează cu instituții fiscale din alte state și cu organizații internaționale (FMI, OCDE, administrații fiscale europene).",
+  ];
+
   return (
     <div
       className={cls}
@@ -16,6 +29,7 @@ export function SlideAtributii2({ active }: { active: boolean }) {
       }}
     >
       <Chenar />
+
       <div
         style={{
           position: "relative",
@@ -29,27 +43,41 @@ export function SlideAtributii2({ active }: { active: boolean }) {
         <div className="anim anim-sr d1">
           <Tag>Atribuțiile de Bază · Slide 2 / 2</Tag>
         </div>
+
         <div className="anim anim-sr d2">
           <Heading size={46}>
             Drepturi Legale{" "}
             <em style={{ color: C.gold, fontStyle: "italic" }}>Art. 134 CF</em>
           </Heading>
         </div>
+
         <Divider />
-        <div className="slide-scroll">
+
+        {/* Intro paragraph */}
+        <div className="anim anim-fu d2">
+          <p
+            style={{
+              fontFamily: "'Lato', sans-serif",
+              fontSize: 16,
+              lineHeight: 1.7,
+              color: C.muted,
+              maxWidth: 820,
+              marginBottom: 22,
+            }}
+          >
+            În vederea realizării atribuțiilor sale, Serviciul Fiscal de Stat
+            dispune de un set de drepturi prevăzute în Codul Fiscal al
+            Republicii Moldova. Aceste drepturi permit instituției să exercite
+            controlul fiscal, să colecteze informațiile necesare administrării
+            obligațiilor fiscale și să aplice măsuri legale pentru asigurarea
+            respectării legislației fiscale și acumulării veniturilor la bugetul
+            public național.
+          </p>
+        </div>
+
+        <div className="">
           <div style={{ gap: 12 }} className="grid grid-cols-1 lg:grid-cols-2">
-            {[
-              "Efectuează controale fiscale la contribuabili și persoane terțe conform Codului Fiscal",
-              "Solicită și primește gratuit informații, date, documente de la orice persoană fizică sau juridică",
-              "Efectuează vizite fiscale la sediul contribuabililor pentru verificarea legalității activităților",
-              "Deschide, examinează și sigilează încăperi de producție, depozite, spații comerciale",
-              "Accesează sistemele electronice de evidență contabilă ale contribuabililor",
-              "Sechestrează bunuri, aplică sancțiuni și execută silit obligațiile fiscale neachitate",
-              "Constată și instrumentează infracțiuni și contravenții în domeniul fiscal",
-              "Emite soluții fiscale individuale anticipate pentru contribuabili (SFIA)",
-              "Confirmă rezidența fiscală a contribuabililor în scopul aplicării convențiilor internaționale",
-              "Cooperează cu instituțiile similare din alte state și cu organisme internaționale (FMI, OCDE)",
-            ].map((text, i) => (
+            {rights.map((text, i) => (
               <div className={`anim anim-fu d${Math.min(i + 2, 8)}`} key={i}>
                 <div
                   style={{
@@ -60,12 +88,11 @@ export function SlideAtributii2({ active }: { active: boolean }) {
                     border: `1px solid rgba(180,135,40,.18)`,
                     borderLeft: `3px solid ${i % 2 === 0 ? C.navy : C.gold}`,
                     borderRadius: 2,
-                    marginBottom: 0,
                   }}
                 >
                   <span
                     style={{
-                      fontFamily: "'DM Mono',monospace",
+                      fontFamily: "'DM Mono', monospace",
                       fontSize: 12,
                       color: C.gold,
                       flexShrink: 0,
@@ -75,9 +102,10 @@ export function SlideAtributii2({ active }: { active: boolean }) {
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>
+
                   <span
                     style={{
-                      fontFamily: "'Lato',sans-serif",
+                      fontFamily: "'Lato', sans-serif",
                       fontSize: 14,
                       color: C.text,
                       lineHeight: 1.6,
