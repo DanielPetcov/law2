@@ -8,7 +8,7 @@ export function SlideConcluzie({ active }: { active: boolean }) {
     <div
       className={cls}
       style={{
-        height: "100%",
+        minHeight: "100%",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",

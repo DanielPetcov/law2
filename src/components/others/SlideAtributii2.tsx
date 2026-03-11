@@ -8,7 +8,7 @@ export function SlideAtributii2({ active }: { active: boolean }) {
     <div
       className={cls}
       style={{
-        height: "100%",
+        minHeight: "100%",
         display: "flex",
         alignItems: "center",
         position: "relative",
@@ -37,9 +37,7 @@ export function SlideAtributii2({ active }: { active: boolean }) {
         </div>
         <Divider />
         <div className="slide-scroll">
-          <div
-            style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}
-          >
+          <div style={{ gap: 12 }} className="grid grid-cols-1 lg:grid-cols-2">
             {[
               "Efectuează controale fiscale la contribuabili și persoane terțe conform Codului Fiscal",
               "Solicită și primește gratuit informații, date, documente de la orice persoană fizică sau juridică",

@@ -8,7 +8,7 @@ export function SlideAtributii1({ active }: { active: boolean }) {
     <div
       className={cls}
       style={{
-        height: "100%",
+        minHeight: "100%",
         display: "flex",
         alignItems: "center",
         position: "relative",
@@ -39,11 +39,10 @@ export function SlideAtributii1({ active }: { active: boolean }) {
         <div className="slide-scroll">
           <div
             style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr 1fr",
               gap: 14,
               marginBottom: 16,
             }}
+            className="grid grid-cols-1 lg:grid-cols-3"
           >
             {[
               {

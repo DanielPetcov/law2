@@ -6,28 +6,13 @@ export function SlideOrgchart({ active }: { active: boolean }) {
   const cls = active ? "slide-active" : "";
   return (
     <div
-      className={cls}
-      style={{
-        minHeight: "100%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        position: "relative",
-        paddingTop: 16,
-      }}
+      className={`${cls} relative flex flex-col justify-center items-center`}
+      style={{ minHeight: "100%", paddingTop: 16, paddingBottom: 24 }}
     >
       <Chenar />
-      <div
-        style={{
-          position: "relative",
-          zIndex: 1,
-          width: "100%",
-          maxWidth: 1100,
-          margin: "0 auto",
-          padding: "0 72px",
-        }}
-      >
+
+      <div className="relative z-10 w-full max-w-275 mx-auto px-4 lg:px-18">
+        {/* Header */}
         <div className="anim anim-sr d1">
           <Tag>Structura Organizatorică</Tag>
         </div>
@@ -38,13 +23,21 @@ export function SlideOrgchart({ active }: { active: boolean }) {
           </Heading>
         </div>
         <Divider />
-        <div className="anim anim-sc d3" style={{ overflowX: "auto" }}>
-          <OrgChart />
+
+        {/* Chart wrapper — scrollable on mobile, centered on desktop */}
+        <div className="anim anim-sc d3 w-full overflow-x-auto pb-2">
+          {/* scroll hint visible only on small screens */}
+          <p className="block lg:hidden text-xs text-center mb-2 text-[#5A5A7A] font-mono tracking-widest uppercase">
+            ← derulați pentru a vedea →
+          </p>
+          {/* min-w forces the chart to not squish; outer div scrolls */}
+          <div className="min-w-160 lg:min-w-0">
+            <OrgChart />
+          </div>
         </div>
-        <div
-          className="anim anim-fu d4"
-          style={{ display: "flex", gap: 14, marginTop: 12, flexWrap: "wrap" }}
-        >
+
+        {/* Legend */}
+        <div className="anim anim-fu d4 flex flex-wrap gap-x-4 gap-y-2 mt-3">
           {[
             [C.navy, "Director / Directoare"],
             [C.navyL, "Directori Adjuncți"],
@@ -52,25 +45,15 @@ export function SlideOrgchart({ active }: { active: boolean }) {
             [C.red, "Direcții Specializate"],
           ].map(([c, l]) => (
             <div
-              key={l}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 6,
-                fontFamily: "'Lato',sans-serif",
-                fontSize: 12,
-                color: C.text,
-              }}
+              key={l as string}
+              className="flex items-center gap-1.5 text-xs"
+              style={{ fontFamily: "'Lato',sans-serif", color: C.text }}
             >
               <div
-                style={{
-                  width: 12,
-                  height: 12,
-                  background: c,
-                  borderRadius: 2,
-                }}
+                className="w-3 h-3 rounded-sm shrink-0"
+                style={{ background: c as string }}
               />
-              {l}
+              <span>{l}</span>
             </div>
           ))}
         </div>

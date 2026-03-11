@@ -1,5 +1,4 @@
 import { Chenar } from "../ui/chenar";
-import { ImgPlaceholder } from "../ui/imgPlaceHolder";
 import { Tag } from "../ui/tag";
 import { Heading } from "../ui/heading";
 import { Divider } from "../ui/divider";

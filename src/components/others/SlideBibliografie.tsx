@@ -66,7 +66,7 @@ export function SlideBibliografie({ active }: { active: boolean }) {
     <div
       className={cls}
       style={{
-        height: "100%",
+        minHeight: "100%",
         display: "flex",
         alignItems: "center",
         position: "relative",
@@ -93,13 +93,8 @@ export function SlideBibliografie({ active }: { active: boolean }) {
           </Heading>
         </div>
         <Divider />
-        <div
-          className="slide-scroll"
-          style={{ maxHeight: "calc(100vh - 220px)" }}
-        >
-          <div
-            style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}
-          >
+        <div className="" style={{ maxHeight: "calc(100vh - 220px)" }}>
+          <div style={{ gap: 10 }} className="grid grid-cols-1 lg:grid-cols-2">
             {refs.map((r, i) => (
               <div
                 className={`anim anim-fu d${Math.min(i + 2, 8)}`}
@@ -158,7 +153,7 @@ export function SlideBibliografie({ active }: { active: boolean }) {
               }}
             >
               Prezentare realizată de{" "}
-              <strong style={{ color: C.navy }}>Cristina Abagică</strong> · 2024
+              <strong style={{ color: C.navy }}>Cristina Abagică</strong> · 2026
               · Material academic — drept public
             </span>
           </div>

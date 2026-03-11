@@ -1,15 +1,6 @@
 import { C } from "../../lib/common";
 
-import {
-  Chenar,
-  Divider,
-  Tag,
-  Heading,
-  Body,
-  ImgPlaceholder,
-  StatBox,
-  FactRow,
-} from "../ui";
+import { Chenar, Divider, Tag, Heading, Body, StatBox, FactRow } from "../ui";
 
 export function SlideConstituire({ active }: { active: boolean }) {
   const cls = active ? "slide-active" : "";

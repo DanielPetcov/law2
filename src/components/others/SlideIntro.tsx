@@ -1,13 +1,4 @@
-import {
-  Chenar,
-  Divider,
-  Tag,
-  Heading,
-  Body,
-  StatBox,
-  ImgPlaceholder,
-  FactRow,
-} from "../ui";
+import { Chenar, Divider, Tag, Heading, Body, StatBox, FactRow } from "../ui";
 
 import { C } from "../../lib/common";
 

@@ -1,14 +1,6 @@
 import { C } from "../../lib/common";
 
-import {
-  Chenar,
-  Tag,
-  Heading,
-  Divider,
-  ImgPlaceholder,
-  Body,
-  FactRow,
-} from "../ui";
+import { Chenar, Tag, Heading, Divider, Body, FactRow } from "../ui";
 
 export function SlideConducere({ active }: { active: boolean }) {
   const cls = active ? "slide-active" : "";
