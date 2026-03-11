@@ -1,5 +1,5 @@
 import { C } from "../../lib/common";
-import { Chenar, Tag, Heading, Divider } from "../ui";
+import { Chenar, Tag, Heading } from "../ui";
 
 export function SlideFinal({ active }: { active: boolean }) {
   const cls = active ? "slide-active" : "";
