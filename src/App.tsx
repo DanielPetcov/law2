@@ -139,7 +139,7 @@ function App() {
             color: C.muted,
           }}
         >
-          Cristina Abagică · 2024
+          Cristina Abagică · 2026
         </div>
 
         {/* Slide counter bottom-right */}
@@ -216,15 +216,15 @@ function App() {
             bottom: 26,
             left: "50%",
             transform: "translateX(-50%)",
-            display: "flex",
             gap: 8,
             alignItems: "center",
             zIndex: 150,
           }}
+          className="hidden lg:flex"
         >
           {[
-            ["←", "prev"],
-            ["→", "next"],
+            ["←", "anterior"],
+            ["→", "următor"],
           ].map(([k, l]) => (
             <div
               key={k}
@@ -322,6 +322,8 @@ function App() {
                 opacity: i === current ? 1 : 0,
                 pointerEvents: i === current ? "all" : "none",
                 transition: "opacity 0.05s",
+                overflowY: "auto", // ← scroll instead of clip
+                overflowX: "hidden",
               }}
             >
               <RenderSlide id={s.id} active={i === current} />

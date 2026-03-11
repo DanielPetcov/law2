@@ -8,9 +8,9 @@ export function SlideActe2({ active }: { active: boolean }) {
     <div
       className={cls}
       style={{
-        height: "100%",
+        minHeight: "100%",
         display: "flex",
-        alignItems: "flex-start",
+        alignItems: "center",
         position: "relative",
         paddingTop: 10,
       }}
@@ -36,10 +36,8 @@ export function SlideActe2({ active }: { active: boolean }) {
           </Heading>
         </div>
         <Divider />
-        <div className="slide-scroll">
-          <div
-            style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}
-          >
+        <div className="">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3.5">
             {[
               {
                 n: "05",

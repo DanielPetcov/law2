@@ -10,7 +10,7 @@ export function SlideAtributii1({ active }: { active: boolean }) {
       style={{
         height: "100%",
         display: "flex",
-        alignItems: "flex-start",
+        alignItems: "center",
         position: "relative",
         paddingTop: 10,
       }}

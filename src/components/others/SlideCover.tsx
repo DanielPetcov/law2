@@ -46,13 +46,20 @@ export function SlideCover({ active }: { active: boolean }) {
           padding: "0 60px",
         }}
       >
-        <div className="anim anim-fi d1" style={{ marginBottom: 20 }}>
-          <ImgPlaceholder
+        <div
+          className="anim anim-fi d1 flex justify-center"
+          style={{ marginBottom: 20 }}
+        >
+          {/* <ImgPlaceholder
             label="Logo SFS / Stema Republicii Moldova"
             height={90}
+          /> */}
+          <img
+            src="/logo-fisc.png"
+            className="max-h-40 lg:max-h-45 2xl:max-h-75"
           />
         </div>
-        <Tag color={C.gold}>Prezentare Academică · Drept Public · 2024</Tag>
+        <Tag color={C.gold}>Prezentare Academică · Drept Public · 2026</Tag>
         <div className="anim anim-fu d2">
           <Heading size={68} color={C.navy}>
             Serviciul Fiscal

@@ -23,11 +23,11 @@ export function StatBox({
       <div
         style={{
           fontFamily: "'Cormorant Garamond',serif",
-          fontSize: 38,
           fontWeight: 700,
           color,
           lineHeight: 1,
         }}
+        className="text-2xl lg:text-4xl"
       >
         {value}
       </div>

@@ -8,7 +8,7 @@ export function SlideActe1({ active }: { active: boolean }) {
     <div
       className={cls}
       style={{
-        height: "100%",
+        minHeight: "100%",
         display: "flex",
         alignItems: "flex-start",
         position: "relative",
@@ -16,6 +16,7 @@ export function SlideActe1({ active }: { active: boolean }) {
       }}
     >
       <Chenar />
+
       <div
         style={{
           position: "relative",
@@ -36,10 +37,8 @@ export function SlideActe1({ active }: { active: boolean }) {
           </Heading>
         </div>
         <Divider />
-        <div className="slide-scroll">
-          <div
-            style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}
-          >
+        <div className="">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3.5">
             {[
               {
                 n: "01",

@@ -8,9 +8,10 @@ export function SlideOrgchart({ active }: { active: boolean }) {
     <div
       className={cls}
       style={{
-        height: "100%",
+        minHeight: "100%",
         display: "flex",
         flexDirection: "column",
+        justifyContent: "center",
         alignItems: "center",
         position: "relative",
         paddingTop: 16,

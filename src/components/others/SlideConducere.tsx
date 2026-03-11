@@ -16,7 +16,7 @@ export function SlideConducere({ active }: { active: boolean }) {
     <div
       className={cls}
       style={{
-        height: "100%",
+        minHeight: "100%",
         display: "flex",
         alignItems: "center",
         position: "relative",
@@ -45,11 +45,10 @@ export function SlideConducere({ active }: { active: boolean }) {
         <Divider />
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "1.3fr 1fr",
             gap: 40,
             alignItems: "start",
           }}
+          className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr]"
         >
           <div>
             <div className="anim anim-fu d3">
@@ -57,15 +56,20 @@ export function SlideConducere({ active }: { active: boolean }) {
                 style={{
                   display: "flex",
                   gap: 20,
-                  alignItems: "flex-start",
                   padding: "20px 24px",
                   background: C.white,
                   border: `2px solid ${C.navy}`,
                   borderRadius: 6,
                   marginBottom: 16,
                 }}
+                className="flex-col lg:flex-row lg:flex-start"
               >
-                <ImgPlaceholder label="Foto Olga Golban" height={100} />
+                {/* <ImgPlaceholder label="Foto Olga Golban" height={100} /> */}
+                <img
+                  src="/olga.jpg"
+                  alt="olga golban"
+                  className="max-h-100 rounded-md object-contain w-fit lg:w-auto mx-auto"
+                />
                 <div style={{ flex: 1 }}>
                   <div
                     style={{

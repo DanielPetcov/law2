@@ -17,10 +17,12 @@ export function SlideIntro({ active }: { active: boolean }) {
     <div
       className={cls}
       style={{
-        height: "100%",
+        minHeight: "100%", // ← minHeight not height, allows growth
         display: "flex",
-        alignItems: "center",
+        alignItems: "flex-start", // ← was "center", that was the culprit
         position: "relative",
+        paddingTop: 24,
+        paddingBottom: 32,
       }}
     >
       <Chenar />
@@ -32,11 +34,9 @@ export function SlideIntro({ active }: { active: boolean }) {
           maxWidth: 1100,
           margin: "0 auto",
           padding: "0 72px",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: 52,
           alignItems: "center",
         }}
+        className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-13"
       >
         <div>
           <div className="anim anim-sr d1">
@@ -90,7 +90,8 @@ export function SlideIntro({ active }: { active: boolean }) {
         </div>
         <div>
           <div className="anim anim-sc d3">
-            <ImgPlaceholder label="Sediul central SFS, Chișinău" height={240} />
+            {/* <ImgPlaceholder label="Sediul central SFS, Chișinău" height={240} /> */}
+            <img src="/fisc-afara.jpg" alt="" style={{ maxHeight: 300 }} />
           </div>
           <div className="anim anim-fu d5" style={{ marginTop: 16 }}>
             <FactRow icon="🏛️">

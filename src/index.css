@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=DM+Mono:wght@400;500&display=swap");
-
+@import "tailwindcss";
 *,
 *::before,
 *::after {
@@ -139,7 +139,7 @@ body {
 
 /* Chenar (decorative border) */
 .chenar {
-  position: absolute;
+  position: fixed;
   inset: 18px;
   border: 1.5px solid #c8a96e;
   pointer-events: none;
@@ -148,7 +148,7 @@ body {
 }
 .chenar::before {
   content: "";
-  position: absolute;
+  position: fixed;
   inset: 5px;
   border: 0.5px solid rgba(180, 135, 40, 0.3);
   border-radius: 2px;
@@ -156,7 +156,7 @@ body {
 /* corner ornaments */
 .chenar::after {
   content: "";
-  position: absolute;
+  position: fixed;
   top: -6px;
   left: -6px;
   right: -6px;
@@ -166,7 +166,7 @@ body {
 }
 
 .corner-ornament {
-  position: absolute;
+  position: fixed;
   width: 22px;
   height: 22px;
   border-color: #b8860b;

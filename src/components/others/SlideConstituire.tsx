@@ -17,7 +17,7 @@ export function SlideConstituire({ active }: { active: boolean }) {
     <div
       className={cls}
       style={{
-        height: "100%",
+        minHeight: "100%",
         display: "flex",
         alignItems: "center",
         position: "relative",
@@ -32,11 +32,10 @@ export function SlideConstituire({ active }: { active: boolean }) {
           maxWidth: 1100,
           margin: "0 auto",
           padding: "0 72px",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
           gap: 52,
           alignItems: "start",
         }}
+        className="grid grid-cols-1 lg:grid-cols-2"
       >
         <div>
           <div className="anim anim-sr d1">
@@ -123,9 +122,13 @@ export function SlideConstituire({ active }: { active: boolean }) {
           </div>
         </div>
         <div className="anim anim-sc d3">
-          <ImgPlaceholder
+          {/* <ImgPlaceholder
             label="Sediul SFS — clădire istorică / inaugurare"
             height={200}
+          /> */}
+          <img
+            src="/cladire.png"
+            alt="Sediul SFS — clădire istorică / inaugurare"
           />
           <div
             style={{
