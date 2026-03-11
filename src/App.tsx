@@ -6,7 +6,7 @@ import { SLIDES, C } from "./lib/common";
 
 function App() {
   const [current, setCurrent] = useState(0);
-  const [dir, setDir] = useState(1);
+  const [_, setDir] = useState(1);
   const [transiting, setTransiting] = useState(false);
   const [overlay, setOverlay] = useState(false);
   const containerRef = useRef(null);
