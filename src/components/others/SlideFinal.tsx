@@ -50,7 +50,7 @@ export function SlideFinal({ active }: { active: boolean }) {
           }}
         >
           Prezentare realizată în cadrul disciplinei <br />
-          <strong style={{ color: C.navy }}>Drept Public</strong>
+          <strong style={{ color: C.navy }}>Drept Administrativ</strong>
         </div>
 
         <div

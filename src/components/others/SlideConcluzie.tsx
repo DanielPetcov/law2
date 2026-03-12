@@ -137,7 +137,8 @@ export function SlideConcluzie({ active }: { active: boolean }) {
             color: C.muted,
           }}
         >
-          "În serviciul contribuabilului" — deviza Serviciului Fiscal de Stat
+          "Împreună construim o societate prosperă și onestă." — viziunea
+          Serviciului Fiscal de Stat
         </div>
       </div>
     </div>

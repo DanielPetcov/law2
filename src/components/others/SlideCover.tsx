@@ -58,7 +58,9 @@ export function SlideCover({ active }: { active: boolean }) {
             className="max-h-40 lg:max-h-45 2xl:max-h-75"
           />
         </div>
-        <Tag color={C.gold}>Prezentare Academică · Drept Public · 2026</Tag>
+        <Tag color={C.gold}>
+          Prezentare Academică · Drept Administrativ · 2026
+        </Tag>
         <div className="anim anim-fu d2">
           <Heading size={68} color={C.navy}>
             Serviciul Fiscal

@@ -119,7 +119,7 @@ export function SlidePersonal({ active }: { active: boolean }) {
         <div>
           <div className="anim anim-sc d3">
             <img
-              src="/agentlucrator.jpg"
+              src="/image.png"
               alt="Funcționar fiscal în activitate"
               className="rounded-md"
             />

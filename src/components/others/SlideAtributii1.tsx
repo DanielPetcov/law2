@@ -101,7 +101,7 @@ export function SlideAtributii1({ active }: { active: boolean }) {
           </p>
         </div>
 
-        <div className="slide-scroll">
+        <div className="">
           <div
             className="grid grid-cols-1 lg:grid-cols-3"
             style={{
