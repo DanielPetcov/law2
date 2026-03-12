@@ -154,7 +154,7 @@ export function SlideBibliografie({ active }: { active: boolean }) {
             >
               Prezentare realizată de{" "}
               <strong style={{ color: C.navy }}>Cristina Abagică</strong> · 2026
-              · Material academic — drept public
+              · Material academic — drept administrativ
             </span>
           </div>
         </div>
