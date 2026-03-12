@@ -6,12 +6,14 @@ export function ActCard({
   year,
   desc,
   color = C.navy,
+  link, // new optional prop
 }: {
-  number?: number;
+  number?: string | number;
   title: string;
   year: string;
   desc: string;
-  color: string;
+  color?: string;
+  link?: string; // optional URL
 }) {
   return (
     <div
@@ -22,60 +24,86 @@ export function ActCard({
         border: `1px solid rgba(180,135,40,.2)`,
         borderLeft: `4px solid ${color}`,
         borderRadius: 4,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
       }}
     >
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: 10,
-          marginBottom: 8,
-        }}
-      >
-        <span
+      <div>
+        <div
           style={{
-            fontFamily: "'DM Mono',monospace",
-            fontSize: 10,
+            display: "flex",
+            alignItems: "center",
+            gap: 10,
+            marginBottom: 8,
+          }}
+        >
+          <span
+            style={{
+              fontFamily: "'DM Mono',monospace",
+              fontSize: 10,
+              color: C.muted,
+              letterSpacing: 2,
+            }}
+          >
+            {number}
+          </span>
+          <span
+            style={{
+              fontFamily: "'DM Mono',monospace",
+              fontSize: 11,
+              color: C.white,
+              background: color,
+              padding: "2px 8px",
+              borderRadius: 2,
+            }}
+          >
+            {year}
+          </span>
+        </div>
+
+        <div
+          style={{
+            fontFamily: "'Cormorant Garamond',serif",
+            fontSize: 18,
+            fontWeight: 600,
+            color: C.navy,
+            marginBottom: 6,
+          }}
+        >
+          {title}
+        </div>
+
+        <div
+          style={{
+            fontFamily: "'Lato',sans-serif",
+            fontSize: 14,
             color: C.muted,
-            letterSpacing: 2,
+            lineHeight: 1.6,
+            marginBottom: 8,
           }}
         >
-          {number}
-        </span>
-        <span
+          {desc}
+        </div>
+      </div>
+
+      {link && (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
-            fontFamily: "'DM Mono',monospace",
-            fontSize: 11,
-            color: C.white,
-            background: color,
-            padding: "2px 8px",
-            borderRadius: 2,
+            fontSize: 13,
+            color: C.gold,
+            fontWeight: 600,
+            textDecoration: "underline",
+            alignSelf: "flex-start",
+            marginTop: 10,
           }}
         >
-          {year}
-        </span>
-      </div>
-      <div
-        style={{
-          fontFamily: "'Cormorant Garamond',serif",
-          fontSize: 18,
-          fontWeight: 600,
-          color: C.navy,
-          marginBottom: 6,
-        }}
-      >
-        {title}
-      </div>
-      <div
-        style={{
-          fontFamily: "'Lato',sans-serif",
-          fontSize: 14,
-          color: C.muted,
-          lineHeight: 1.6,
-        }}
-      >
-        {desc}
-      </div>
+          Vezi Documentul
+        </a>
+      )}
     </div>
   );
 }

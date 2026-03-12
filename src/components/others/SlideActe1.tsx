@@ -1,9 +1,43 @@
 import { C } from "../../lib/common";
-
 import { Chenar, Divider, Tag, Heading, ActCard } from "../ui";
 
 export function SlideActe1({ active }: { active: boolean }) {
   const cls = active ? "slide-active" : "";
+  const acts = [
+    {
+      n: "01",
+      year: "1992",
+      color: C.navy,
+      title: "Legea nr.876-XII din 22 ian. 1992",
+      desc: "Legea fondatoare — instituie pentru prima dată Serviciul Fiscal de Stat ca sistem unitar de organe fiscale pe teritoriul Republicii Moldova.",
+      link: "https://www.legis.md/cautare/downloadpdf/64354",
+    },
+    {
+      n: "02",
+      year: "1997",
+      color: C.navyL,
+      title: "Codul Fiscal al RM (Titlul V)",
+      desc: "Art. 131–153 reglementează organizarea, funcțiile, atribuțiile, drepturile și obligațiile SFS. Baza legală principală a activității fiscale.",
+      link: "https://www.legis.md/cautare/getResults?doc_id=138569&lang=ro",
+    },
+    {
+      n: "03",
+      year: "2017",
+      color: C.gold,
+      title: "Legea nr.281 din 16.12.2016",
+      desc: "Amendează Codul Fiscal, stabilind SFS ca persoană juridică unică pentru administrarea fiscală pe întreg teritoriul RM, cu aplicare din 1 apr. 2017.",
+      link: "https://www.legis.md/cautare/getResults?doc_id=96913&lang=ro",
+    },
+    {
+      n: "04",
+      year: "2017",
+      color: C.red,
+      title: "HG nr.395/2017 — Regulamentul SFS",
+      desc: "Hotărârea Guvernului care aprobă Regulamentul intern de organizare și funcționare a Serviciului Fiscal de Stat. Definește structura și atribuțiile detaliate.",
+      link: "https://primarie.halleykm.md/legislatie/articol/4737/hotrrea-guvernului-cu-privire-la-aprobarea-regulamentului-privind-organizarea-i-funcionarea-serviciului-fiscal-de-stat",
+    },
+  ];
+
   return (
     <div
       className={cls}
@@ -39,36 +73,7 @@ export function SlideActe1({ active }: { active: boolean }) {
         <Divider />
         <div className="">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-3.5">
-            {[
-              {
-                n: "01",
-                year: "1992",
-                color: C.navy,
-                title: "Legea nr.876-XII din 22 ian. 1992",
-                desc: "Legea fondatoare — instituie pentru prima dată Serviciul Fiscal de Stat ca sistem unitar de organe fiscale pe teritoriul Republicii Moldova.",
-              },
-              {
-                n: "02",
-                year: "1997",
-                color: C.navyL,
-                title: "Codul Fiscal al RM (Titlul V)",
-                desc: "Art. 131–153 reglementează organizarea, funcțiile, atribuțiile, drepturile și obligațiile SFS. Baza legală principală a activității fiscale.",
-              },
-              {
-                n: "03",
-                year: "2017",
-                color: C.gold,
-                title: "Legea nr.281 din 16.12.2016",
-                desc: "Amendează Codul Fiscal, stabilind SFS ca persoană juridică unică pentru administrarea fiscală pe întreg teritoriul RM, cu aplicare din 1 apr. 2017.",
-              },
-              {
-                n: "04",
-                year: "2017",
-                color: C.red,
-                title: "HG nr.395/2017 — Regulamentul SFS",
-                desc: "Hotărârea Guvernului care aprobă Regulamentul intern de organizare și funcționare a Serviciului Fiscal de Stat. Definește structura și atribuțiile detaliate.",
-              },
-            ].map((a) => (
+            {acts.map((a) => (
               <div className="anim anim-fu d3" key={a.n}>
                 <ActCard {...a} />
               </div>

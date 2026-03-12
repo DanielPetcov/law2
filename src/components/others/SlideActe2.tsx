@@ -1,9 +1,35 @@
 import { C } from "../../lib/common";
-
 import { Chenar, Tag, Heading, Divider, ActCard } from "../ui";
 
 export function SlideActe2({ active }: { active: boolean }) {
   const cls = active ? "slide-active" : "";
+
+  const acts = [
+    {
+      n: "05",
+      year: "2014",
+      color: C.navy,
+      title: "HG nr.500/2014 — Simbolica SFS",
+      desc: "Aprobă stema, drapelul și culoarea corporativă a SFS.",
+      link: "https://www.legis.md/UserFiles/Image/RO/Guvernul/2014/anexa3_HG%20Nr_%20500%20din%2001_07_2014_ro.docx",
+    },
+    {
+      n: "06",
+      year: "2023",
+      color: C.gold,
+      title: "Ordinele SFS (ex. Ordin nr.499/2025)",
+      desc: "Acte interne ale Serviciului Fiscal privind proceduri și instrucțiuni operaționale pentru inspectori.",
+      link: "https://sfs.md/ro/ordinele-de-baze-de-date-de-generalizare",
+    },
+    {
+      n: "07",
+      year: "2024",
+      color: C.red,
+      title: "HG nr.250 din 10 apr.2024",
+      desc: "Regulamentul privind organizarea audiențelor publice ale conducerii SFS cu cetățenii și contribuabilii.",
+      link: "https://www.legis.md/cautare/getResults?doc_id=142825&lang=ro",
+    },
+  ];
   return (
     <div
       className={cls}
@@ -36,32 +62,9 @@ export function SlideActe2({ active }: { active: boolean }) {
           </Heading>
         </div>
         <Divider />
-        <div className="">
+        <div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-3.5">
-            {[
-              {
-                n: "05",
-                year: "2014",
-                color: C.navy,
-                title: "HG nr.500/2014 — Simbolica SFS",
-                desc: "Aprobă stema, drapelul și culoarea corporativă a SFS, precum și deviza instituțională „În serviciul contribuabilului”.",
-              },
-
-              {
-                n: "06",
-                year: "2023",
-                color: C.gold,
-                title: "Ordinele SFS (nr.53/2022, 208/2024 etc.)",
-                desc: "Ordine interne ale Serviciului Fiscal privind formulare, proceduri, dări de seamă fiscale și instrucțiuni operaționale pentru inspectori.",
-              },
-              {
-                n: "07",
-                year: "2024",
-                color: C.red,
-                title: "HG nr.250 din 10 apr. 2024",
-                desc: "Regulamentul privind organizarea audiențelor publice ale conducerii SFS cu cetățenii și contribuabilii.",
-              },
-            ].map((a) => (
+            {acts.map((a) => (
               <div className="anim anim-fu d3" key={a.n}>
                 <ActCard {...a} />
               </div>
